@@ -3,6 +3,8 @@ Python Implementation of Experiment 4.5 of the Discriminative Kalman Filter pape
 
 First, run [flint_preprocess_data.ipynb](flint-data-preprocessing/flint_preprocess_data.ipynb) using the instructions in [its README](flint-data-preprocessing/README.md).
 
+Next, run [Paper_Script_45.ipynb](Paper_Script_45.ipynb).
+
 For more information, see [report.pdf](report.pdf).
 
-Additional notes are in [notes](notes)
+Additional notes are in [Notes_LBMR.ipynb](Notes_LMBR.ipynb).
