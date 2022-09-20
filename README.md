@@ -5,6 +5,6 @@ First, run [flint_preprocess_data.ipynb](flint-data-preprocessing/flint_preproce
 
 Next, run [Paper_Script_45.ipynb](Paper_Script_45.ipynb).
 
-For more information, see [report.pdf](report.pdf).
+For more information, see [DKF Report.pdf](DKF Report.pdf).
 
 Additional notes are in [Notes_LBMR.ipynb](Notes_LMBR.ipynb).
