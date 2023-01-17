@@ -26,12 +26,15 @@ def train_nn(model, learning_rate, weight_decay, iterations, x_train, y_train):
     
     optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
+    losses = np.zeros(iterations)
+    
     for t in range(iterations):
         # Forward pass: compute predicted y by passing x to the model.
         y_pred = model(x_train)
 
-        # Compute and print loss.
+        # Compute and store loss.
         loss = loss_fn(y_pred, y_train)
+        losses[t] = loss
         
         #if t % 500 == 499:
         #    print(t, loss.item())
@@ -50,6 +53,9 @@ def train_nn(model, learning_rate, weight_decay, iterations, x_train, y_train):
         # Calling the step function on an Optimizer makes an update to its
         # parameters
         optimizer.step()
+        
+        
+    return losses
         
         
         
