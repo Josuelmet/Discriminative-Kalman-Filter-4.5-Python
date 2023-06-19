@@ -1,0 +1,118 @@
+# To be filled by the author(s) at the time of submission
+# -------------------------------------------------------
+
+# Title of the article:
+#  - For a successful replication, it should be prefixed with "[Re]"
+#  - For a failed replication, it should be prefixed with "[¬Re]"
+#  - For other article types, no instruction (but please, not too long)
+title: "[Re] The Discriminative Kalman Filter for Bayesian Filtering with Nonlinear and Non-Gaussian Observation Models"
+
+# List of authors with name, orcid number, email and affiliation
+# Affiliation "*" means contact author (required even for single-authored papers)
+authors:
+  - name: Josue Casco-Rodriguez
+    orcid: 0000-0002-9694-0982
+    email: jc135@rice.edu
+    affiliations: 1,*           # * is for contact author
+    
+  - name: Caleb Kemere
+    orcid: 0000-0003-2054-0234
+    email: ck19@rice.edu
+    affiliations: 1
+
+  - name: Richard G. Baraniuk
+    orcid: 0000-0002-0721-8999
+    email: richb@rice.edu
+    affiliations: 1
+
+
+# List of affiliations with code (corresponding to author affiliations), name
+# and address. You can also use these affiliations to add text such as "Equal
+# contributions" as name (with no address).
+affiliations:
+  - code:    1
+    name:    Rice University
+    address: Houston, Texas, USA
+
+
+# List of keywords (adding the programming language might be a good idea)
+keywords: rescience c, computational neuroscience, neuroengineering, signal processing, kalman filter, brain-computer interface, python, matlab
+
+# Code URL and DOI/SWH (url is mandatory for replication, doi after acceptance)
+# You can get a DOI for your code from Zenodo, or an SWH identifier from
+# Software Heritage.
+#   see https://guides.github.com/activities/citable-code/
+code:
+  - url: https://github.com/Josuelmet/Discriminative-Kalman-Filter-4.5-Python
+  - doi: 
+  - swh: 
+
+# Data URL and DOI (optional if no data)
+data:
+  - url: https://portal.nersc.gov/project/crcns/download/dream/data_sets/Flint_2012
+  - doi: 10.1088/1741-2560/9/4/046006
+
+# Information about the original article that has been replicated
+replication:
+ - cite: M. C. Burkhart, D. M. Brandman, B. Franco, L. R. Hochberg, and M. T. Harrison. “The Discriminative Kalman Filter for Bayesian Filtering with Nonlinear and Nongaussian Observation Models.” In: Neural Computation 32.5 (2020)
+ - bib:  burkhart_2020
+ - url:  https://direct.mit.edu/neco/article-abstract/32/5/969/95592/The-Discriminative-Kalman-Filter-for-Bayesian
+ - doi:  10.1162/neco_a_01275
+
+# Don't forget to surround abstract with double quotes
+abstract: "Kalman filters provide a straightforward and interpretable means to estimate hidden or latent variables, and have found numerous applications in control, robotics, signal processing, and machine learning. One such application is neural decoding for neuroprostheses. In 2020, Burkhart et al. thoroughly evaluated their new version of the Kalman filter that leverages Bayes' theorem to improve filter performance for highly non-linear or non-Gaussian observation models. This work provides an open-source Python alternative to the authors' MATLAB algorithm. Specifically, we reproduce their most salient results for neuroscientific contexts and further examine the efficacy of their filter using multiple random seeds and previously unused trials from the authors' dataset. All experiments were performed offline using a single CPU."
+
+# Bibliography file (yours)
+bibliography: bibliography.bib
+  
+# Type of the article
+# Type can be:
+#  * Editorial
+#  * Letter
+#  * Replication
+type: Replication
+
+# Scientific domain of the article (e.g. Computational Neuroscience)
+#  (one domain only & try to be not overly specific)
+domain: Computational Neuroscience
+
+# Coding language (main one only if several)
+language: Python
+
+  
+# To be filled by the author(s) after acceptance
+# -----------------------------------------------------------------------------
+
+# For example, the URL of the GitHub issue where review actually occured
+review: 
+  - url: 
+
+contributors:
+  - name:
+    orcid: 
+    role: editor
+  - name:
+    orcid:
+    role: reviewer
+  - name:
+    orcid:
+    role: reviewer
+
+# This information will be provided by the editor
+dates:
+  - received:  
+  - accepted:
+  - published: 
+
+# This information will be provided by the editor
+article:
+  - number: # Article number will be automatically assigned during publication
+  - doi:    # DOI from Zenodo
+  - url:    # Final PDF URL (Zenodo or rescience website?)
+
+# This information will be provided by the editor
+journal:
+  - name:   
+  - issn:   
+  - volume: 
+  - issue:  
