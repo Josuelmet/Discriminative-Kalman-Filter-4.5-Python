@@ -23,7 +23,8 @@ def nw_est(ztest, xtrain, ztrain, sz2, return_S_est=False):
     xP = np.sum(xtrain * P_i, axis=0)
 
     # sP oftentimes equals 0. Luckily, numpy handles this by returning NaN.
-    f_est = xP / sP
+    with np.seterr(divide='ignore', invalid='ignore'): # ignore warning if dividing by 0
+        f_est = xP / sP
     
     #if sP == 0:
     #    return np.inf
