@@ -2,6 +2,7 @@ import numpy as np
 from scipy.optimize import minimize_scalar
 from nw_est import nw_est
 
+import warnings
 
 def optimize_sx(ztest, xtrain, ztrain):
     '''
@@ -39,7 +40,9 @@ def optimize_sx(ztest, xtrain, ztrain):
                                  sz2 = sx)
     
         # Return MSE of prediction made using bandwidth sx.
-        return np.nanmean((xtrain - preds) ** 2)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=RuntimeWarning)
+            return np.nanmean((xtrain - preds) ** 2)
 
 
     '''
