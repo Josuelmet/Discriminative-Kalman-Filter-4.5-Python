@@ -49,7 +49,13 @@ def optimize_sx(ztest, xtrain, ztrain):
     Find argmax of x on function mse.
     Sometimes this will throw RuntimeWarnings because of a division by zero in nw_est.py.
     In that case, nw_est returns an array of NaNs, which the optimizer correctly handles as a very high number.
+
+    Note: By default, scipy starts with an initial kernel bandwidth (sx) guess within bracket = (0.0, 1.0).
+          However, we do not want to potentially begin with a really low (<1e-4) bandwidth
+          because then the mse returns nan.
+          So, we change the initial bandwitdth guess to be within bracket = (0.1, 1.0).
+          See https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.bracket.html for details.
     '''
-    sx_opt = minimize_scalar(mse)
+    sx_opt = minimize_scalar(mse, bracket=(0.1, 1.0))
     
     return sx_opt.x # Just return the argmax, don't keep any of the metadata about how optimization went.
