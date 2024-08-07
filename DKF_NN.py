@@ -14,7 +14,7 @@ from optimize_sx import optimize_sx
 
 
 
-def train_nn(model, learning_rate, weight_decay, iterations, x_train, y_train):
+def train_nn(model, learning_rate, weight_decay, iterations, x_train, y_train, momentum=0):
     '''
     Perform gradient descent on the model.
     
@@ -24,7 +24,7 @@ def train_nn(model, learning_rate, weight_decay, iterations, x_train, y_train):
     loss_fn = torch.nn.MSELoss(reduction='sum')
 
     
-    optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
+    optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate, weight_decay=weight_decay, momentum=momentum)
 
     losses = np.zeros(iterations)
     
